@@ -10,7 +10,7 @@ dificil... pero no imposible...
 
 @ Derechos Reservados - DJDA
 
-<img width="500" height="500" alt="DJ_2_Logo-removebg-preview" src="https://github.com/user-attachments/assets/af8dcbe1-cd41-4788-bad5-5f9905d9f746" />
+                                    <img width="500" height="500" alt="DJ_2_Logo-removebg-preview" src="https://github.com/user-attachments/assets/af8dcbe1-cd41-4788-bad5-5f9905d9f746" />
 
 
 
