@@ -1,0 +1,276 @@
+*{
+    margin: 0; /*Siempre hacerlo en web*/
+}
+
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit; /*Que hereda del padre, (I)*/
+}
+
+Ul{
+    background-color: lightgray;
+    list-style: none; /*Le quita la linea de abajo en este caso a lo que escribimos dentro que es: Menu 1*/
+    margin: 0; /*Margin es la distancia que hay de arriba hacia en este caso la lista o header*/
+    padding: 0; /*Padding es en la parte de adentro la distancia que hay en este caso con las letras o lo que esta dentro del contenedor (I)*/   
+}
+
+li{
+    /*  background-color: chocolate; Cambia color dentro de los hijos */
+    color: rgb(81, 81, 81);
+    /*border: dashed black; Dashed es linea continua osea linea de puntitos, segundo es el color*/
+    padding: .3rem .7rem; /*Es una unidad relativa basada en el tamaño de fuente del elemento raíz (html).*/
+}
+
+li:hover{
+    background-color: rgb(81, 81, 81);
+    color: white;
+}
+
+
+/*Solamente hablando de Flexbox
+ul{
+display: flex;  Activa Flexbox para alinear y distribuir elementos hijos en fila o columna* El padre (container o ul) se vuelve flex  Los hijos (box) se ordenan automáticamente*/ /*los hace en horizontal
+
+flex:wrap;
+justify-content: space-between; 
+gap: .8rem ;
+
+Empieza por defecto en start a como en row si en vez de eso es un end pasa como el row-reverse na mas q mantienen elmismo orden
+
+Se pueden jugarcon los estilos pal orden en este caso justify-content y flex-direction
+
+align-items: center; alinear al centro con el justify
+
+flex-direction: column-reverse;  Row es el por defecto que esta lo que significa Fila en el caso q quieras q sea al reves de l orden en la linea seria row-reverse, column es de arriba pa abajo (Menu) igual se puede usar el column-reverse
+
+
+align-content: safe center; Safe and unsafe / el safe le dice que centra lo mejor que pueda pero que no pierda informacion  igualmente visitar la web porque n en to los navegadores esta disponible, asi que en CAN I USE WEB Puedes ver eso 
+
+} */
+
+ul{
+    display: flex;
+   justify-content: flex-end;
+}
+/* align-items: flex-start;
+}
+
+li:nth-child(2){
+    align-self: flex-end; /*El self es pa poner en otra position
+} */
+
+/*Es un hijo
+li{
+flex: 1 1 200px; /* El ancho base calcula el tama;o pal orden Indagar sobre esto
+text-align: center;
+}
+
+Estos son pa ver en este caso el orden de como qeramos ordenar el menu */
+
+/*
+li:nth-child(2) {
+    order: -3; Ordena de primero el numero porque es negativo en este caso del lado izquierdo
+}
+
+li:nth-child(1) {
+    order: 50;
+} */
+
+/*Agarra el espacio rsidual en este caso el espacio que quedaba en este caso en blanco
+li{
+
+    Flex: 1 1 1;  en este caso el primero seria el flex grow, segundo el shrink y el ultimo el basis*/
+
+    /*flex-grow: 1; /*Este es el valor por defecto, cuando se pone 1, cada elemento adentro va a agarrar una porcion igual pa q crezcan*/
+
+    /*flex-basis: 5rem;/*Pa que se encojan en este caso por el navegarodr (Indagar)*/
+
+    /* flex-shrink: 0; /*Ordena que no se encojan ppero si pones el grow uno como el de abajo solamente ese se va a encojer en este caso seria el menu 3*/
+
+/*}*/
+
+/*Solamente hace que crezca u agare el especio en este caso al elemento u menu 3
+li:nth-child(3) {
+    flex-grow: 1;
+} */
+
+
+@media  (width < 1024px) {
+    li{
+        flex-grow: 1;
+    }   
+
+    .contenedor-columnas{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*Cuando el tama;o del navegador sea de 480 pixeles se pondra en modo columna*/
+@media (width < 480px) {
+    ul{
+flex-direction: column;
+    }
+
+    .contenedor-columnas{
+        grid-template-columns: 1fr;
+    }
+}
+
+aside{
+    background-color: aqua;
+}
+
+main{
+    background-color: orange;
+}
+
+footer{
+    background-color: greenyellow;
+}
+
+.Contenedor-General{
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /*Usar esto pa mandar hasta abajo al footer*/
+}
+
+.Contenedor-central{
+    flex: 1;
+    display: flex;  /*pa poner algun banner al lado derecho y al tro lado contenido*/
+}
+
+.Contenedor-central > aside {
+    flex-basis: 30rem;
+}
+
+/*Pa celular*/
+.Contenedor-central >main {
+    flex-grow: 1;
+}
+
+.contenedor-columnas{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; /*Pa que baje uno de los 4 article*/
+}
+
+.contenedor-columnas > *{ /*El * aqui se refiere a todos los hijos*/
+    background-color: wheat;
+    flex-basis: 25%; /*Ir jugando hasta que baje uno*/
+
+    flex-grow: 1; /*Pa que no alla espacio y los elementos cubran la parte*/
+}
+
+/*En el caso que si es con GRID, es mejor con grid*/
+
+/*
+.contenedor-columnas{ 
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+Padre = el que envuelve
+Hijo = el que está dentro
+
+🔹 Padre (contenedor)
+
+Es el elemento que contiene a otros dentro.
+
+🔹 Hijos
+
+Son los elementos que están dentro del padre.
+
+Ejeplo:
+
+<div class="container">
+  <div class="box">1</div>
+  <div class="box">2</div>
+</div>
+
+Padre → .container
+Hijos → .box
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+    /* Rem Es Valor relativo
+    .3rem ≈ 4.8px
+    .7rem ≈ 11.2px
+    Example:
+    1rem = 16px  0.5rem = 8px  2rem = 32px
+
+    rem → tamaños globales (padding, margin, font-size)
+    px → detalles pequeños (bordes, sombras)
+    */
+
+/*
+Relativo = Que depende de otra cosa No tiene un valor fijo por sí mismo.
+
+Tipos de valores relativos en css
+
+rem → depende del html
+em → depende del padre
+% → depende del contenedor
+vw → depende del ancho de pantalla
+vh → depende del alto de pantalla
+
+Relativo = depende de algo
+Absoluto = fijo, no cambia
+
+
+
+
+*/

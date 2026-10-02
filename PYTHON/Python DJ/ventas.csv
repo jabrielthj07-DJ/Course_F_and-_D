@@ -1,0 +1,25 @@
+Fecha,Producto,Categoria,Cantidad,Precio_Unitario,Total,Tipo_Cliente
+2025-01-02,Arroz,Alimentos,5,1.2,6.0,Minorista
+2025-01-02,Leche,Lácteos,3,1.5,4.5,Minorista
+2025-01-03,Pan,Panadería,10,0.3,3.0,Mayorista
+2025-01-03,Huevos,Alimentos,2,3.5,7.0,Minorista
+2025-01-04,Refresco,Bebidas,6,0.75,4.5,Minorista
+2025-01-04,Cerveza,Bebidas,12,1.1,13.2,Mayorista
+2025-01-05,Pollo,Carnes,4,5.0,20.0,Minorista
+2025-01-05,Carne de res,Carnes,2,7.5,15.0,Mayorista
+2025-01-06,Arroz,Alimentos,8,1.2,9.6,Mayorista
+2025-01-06,Leche,Lácteos,5,1.5,7.5,Minorista
+2025-01-07,Pan,Panadería,15,0.3,4.5,Minorista
+2025-01-07,Huevos,Alimentos,3,3.5,10.5,Mayorista
+2025-01-08,Refresco,Bebidas,10,0.75,7.5,Minorista
+2025-01-08,Cerveza,Bebidas,20,1.1,22.0,Mayorista
+2025-01-09,Pollo,Carnes,6,5.0,30.0,Mayorista
+2025-01-09,Carne de res,Carnes,3,7.5,22.5,Minorista
+2025-01-10,Arroz,Alimentos,7,1.2,8.4,Minorista
+2025-01-10,Leche,Lácteos,4,1.5,6.0,Mayorista
+2025-01-11,Pan,Panadería,20,0.3,6.0,Mayorista
+2025-01-11,Huevos,Alimentos,5,3.5,17.5,Minorista
+2025-01-12,Refresco,Bebidas,12,0.75,9.0,Mayorista
+2025-01-12,Cerveza,Bebidas,18,1.1,19.8,Minorista
+2025-01-13,Pollo,Carnes,5,5.0,25.0,Minorista
+2025-01-13,Carne de res,Carnes,4,7.5,30.0,Mayorista

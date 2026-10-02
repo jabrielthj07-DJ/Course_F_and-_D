@@ -1,0 +1,145 @@
+p.texto{
+    Color: red;
+}
+
+p.texto2{
+    color: yellow;
+}
+
+p.especial{
+    color:red;
+}
+
+p.titulo{
+color:aqua;
+}
+
+div h2, div h3{
+    color: brown;
+}
+
+div p{
+    color: purple;
+}
+
+
+#fondo{
+    background-color: rgba(255, 0, 0);
+    
+    background-image: url("coffe.png");
+    height: 200px;
+    background-size: 100px 100px;
+    background-repeat: repeat-y; 
+    background-position: center top;
+
+}
+
+.margen{
+background-color: chocolate;
+margin: 15px 20px 25px 30px;
+padding: 30px 25px 20px 15px;
+border: 1px;
+height: 200px;
+overflow: scroll;
+outline: solid red 1px;
+}
+
+.text{
+    text-align: center;
+    text-shadow: 1px 8px 8px blue;
+
+}
+
+    a:link{ 
+    Color: red; 
+    }
+
+    a:visited{
+color:goldenrod;
+    }
+
+    a:hover{
+color:blueviolet;
+    }
+
+    a:active{
+        color:blue;
+    }
+
+    ul{
+        background-color: aqua;
+        list-style-type:armenian;
+        
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td, th {
+        border: solid 1px #f00;
+        padding: 5px;
+    }
+
+    th{
+        background-color: tomato;
+        color: white;
+        text-align: left;
+    }
+
+    tr:nth-child(even ){
+        background-color: #eee;
+    }
+
+    tr:hover{
+        background-color: goldenrod;
+        cursor: pointer;
+    }
+
+    .Inline{
+    display: inline;
+    }
+
+    span{
+        display: block;
+        max-width: 100px;
+        background-color: #f00;
+    }
+
+    #Position{
+        position: relative;
+        left: 20px;
+    }
+
+    .Left{
+        float: left;
+    }
+
+    .Right{
+        float: right;
+        color: #f00;
+    }
+
+    .Conteiner{
+        height: 200px;
+    }
+
+    .Column{
+        margin: 0 15px;
+        padding: 10px 15px;
+        width: 33.3%;
+    }
+
+    .Inline-block{
+        display: inline-block;
+        height: 55px;
+        background-color: blue;
+    }
+
+    .Center{
+        text-align: center;
+        width: 200px;
+        margin: 0 auto;
+        background-color: aqua;
+    }

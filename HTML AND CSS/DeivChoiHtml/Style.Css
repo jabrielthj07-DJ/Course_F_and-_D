@@ -1,0 +1,142 @@
+/* Pagina de Inicio */
+
+html{
+scroll-behavior: smooth; /*Es para bajar lentamente*/
+}
+
+#Home{
+min-height: 90vh; /*Indagar /  tambien se ocupa para el tama;o de la imagen en este caso*/
+
+/*Indagar estas tres funciones y ver si esta bien text-align*/
+display: flex;
+justify-content: center;
+align-items: center;
+
+background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /*Siempre poner la com apor fuera del parentesis nunca adentro, despues le sigue la url del fondo*/
+
+url(https://img.freepik.com/foto-gratis/vista-leon-3d-fondo-naturaleza_23-2150800657.jpg?semt=ais_rp_50_assets&w=740&q=80);
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+header {
+    width: 1350px; 
+    height: 95px;
+    background-color: beige;
+    border-width: 10px;
+    border-color: gold;
+    border-style: solid; /*Es para poner grueso el borde, jugar con eso*/
+    border-radius:30px; /* Es para darle las vueltas en las esquinas*/
+    margin: 20px; /*Hace la funcion que se aleja en este caso en la pagina web de las esquinas*/
+
+/* El primer numero es para arriba y abajo y el segundo para izquierda y derecha*/ /*Probar hasta que se centre el heading o lo que sea en este caso*/
+    padding: 10px 20px;
+
+    display: flex; /* Para que todo se ponga en linea */ /* Siempre agregarlo para ver los cambios en el header*/
+
+    justify-content: space-between; /*Para separar en este caso Todo lo del header exactamente a lado derecho*/
+}
+
+header a{
+text-decoration: none;
+padding:0px 13px ; /*Para que los links para navegar tengan espacios entre si*/
+}
+
+header a:hover{ /*Esto es para cuando pasen el cursor por arriba de algo, en este caso hover ocuparlo siempre*/
+    background-color: rgb(114, 153, 225);
+}
+
+.LogoDJ{
+    display:inline-block;
+    height: 100%;
+    width: auto;
+    text-align: left;
+}
+
+Body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(https://thumbs.dreamstime.com/b/le%C3%B3n-noble-que-descansa-sobre-un-fondo-beige-en-una-pose-elegante-simboliza-la-fuerza-de-sabidur%C3%ADa-y-autoridad-tranquila-se-380586593.jpg);
+
+    /* Esto de aqui abajo es para que quede bien posicionada la imagen de fondo*/
+
+    background-position: center; /* Centra la imagen de fondo*/
+    
+    background-size: cover; /* para que cubra todo*/
+
+    background-repeat: no-repeat; /* Pa que no se repita la misma ft en el fondo de atras*/ /*Igual no creo necesitarla va demas in tenerla no se repetiran las imagenes pero esta por si acaso*/
+
+    min-width: 50vh;
+    min-height: 80vh; /*min-height significa minima altura y 100vh significa 100 porciento de la altura del view port que es en este caso el tama;o completo de la pantalla pa abajo*/
+}
+
+img{ /* Componer html */
+    border-image-width: 100;
+    display: inline-block; /* Es para hacer que funcione el height y el width resumen,que se haga una caja en la imagen para asi poder modificarla*/
+    height: 50%; /* Siempre agregar el porciento % porque si no no da*/
+    width: 50%;
+}
+
+h1{
+    color: rgb(41, 69, 60);
+    font-family: sans-serif;
+}
+
+
+h2{
+    font-family: merienda; /*en este caso no se marcara en azul como os otros, y esto es por la razon que no estaan agregadas or defectos, fijarse bien en google fonts el nombre para agregarlo manuelmente.*/
+    color: beige;
+}
+
+p{
+    color: rgba(0, 0, 0, 0.727);
+}
+
+#Unico1{
+Color: rgb(6, 81, 6);
+text-decoration: none;
+}
+
+#Unico2{
+color:rgb(6, 81, 6);
+text-decoration: none;
+}
+/* Pagina 2 */
+div p{
+    color: rgb(61, 4, 4);
+}
+
+
+/* pagina 3 */
+
+/* CLASES Y IDS */
+
+.Linkyoutube{
+    color: rgb(30, 52, 45);
+    text-decoration: solid;
+}
+
+.Linkyoutube:hover{
+    background-color: rgb(50, 163, 255);
+}
+
+.mi-clase1{
+    color: rgb(40, 79, 79);
+}
+
+.mi-clase2{
+    text-decoration:underline;
+}
+
+/* Nota: En este caso siempre para darle estilo a todo siempre utilizar las class, antes que uitlizar ids*/
+
+#mi-id{
+    color:blanchedalmond;
+}
+
+/* Nota: Utilizar unicamente uno por index.html, indagar lugares donde mas se utilizan */
+
+Footer{
+    text-align: center;
+}

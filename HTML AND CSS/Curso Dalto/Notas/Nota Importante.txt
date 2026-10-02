@@ -1,0 +1,4 @@
+Esta carpeta no hay que modificar el nombre ya que toda es un solo proyecto funcional,
+si quieres hacer otro proyecto personal. crea una carpeta nueva sin meterla a otra como 
+esta para evitar confusiones y problemas a futuro, si puedes tambien investiga sobre el tema.
+ me despido y bueno suerte en tu caminocomo desarrollador web y programador...

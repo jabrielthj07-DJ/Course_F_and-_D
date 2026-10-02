@@ -1,0 +1,166 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #1D202B;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+}
+/*
+Flexbox => Elementos dentro de Cajas
+Grid => Cajas dentro de Estructuras
+*/
+
+/*Contenedor que estan adentro los cards o as imagenes de los concierts*/
+.contenedor {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+
+	/* FLEXBOX
+	display: flex; */
+
+	/*GRID*/
+	gap: 20px;
+	display:grid;
+	grid-template-columns: 3fr 1fr/* 1fr 1fr; En este caso se le esta diciendo cuantas columnas debe de haber, el primero es de la izquierda y segundo de la derecha ambos con un valor de 50%*/
+	/* En este caso no es necesarioentrar en contenedor conciertos papner q el ancho o cosas aqui, solamente aqui con los 1fr uno le agraguega el tama;o q quiera, se ocup on px, % etc*/
+	
+}
+
+.titulo {
+	font-size: 24px;
+	padding: 20px 0;
+}
+
+/*Contenedor que estan adentro los cards o as imagenes de los concierts*/
+.contenedor-conciertos {
+	
+	/* FLEXBOX
+	width:70%;
+	display: flex;
+	gap: 30px; /*Es para separar cada elemento el gap, osea que tengan espacios entre si
+	flex-wrap:wrap; Lo que hace es que si no caben los elementos los ponga debajo*/
+
+	/*GRID*/
+	Display:grid;
+	grid-template-columns: repeat(3, 1fr); /*Lo que hace es q le dice que quiere que allan 3 columnas con un tama;o de 1fraccion*/
+	gap: 20px;
+}
+
+/*Imagenes de los conciertos o tarjetitas */
+.card {
+	border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+
+
+	/* FLEXBOX
+	width: calc(33.33% - 20px); /*Hace en este caso un calculo para que se pongan n linea o algo asi (Indaars)*/
+	
+}
+
+.card .textos {
+	height: 100%; /*Siempre tiene que tener este espacio para poder distribuir los textos con space-between*/
+	
+
+	/*Nota u consejo en estos casos es mejor FLEXBOX Pa mejorcontrol*/
+
+	/* FLEXBOX
+
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;*/
+
+	/*GRID*/
+	display: grid;
+	grid-template-rows: 1fr auto;
+	
+}
+
+.banner {
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px;
+	background-size: cover;
+	background-position: center center;
+
+	/*FLEXBOX*/
+
+	display:flex;
+	flex-direction:column;
+	justify-content: space-between; 
+
+		/*GRID
+
+	display: grid;
+	grid-template-rows:auto auto auto;
+	align-items: center ;  */
+}
+
+.banner ul {
+	list-style: none;
+}
+
+.banner ul li {
+	margin: 15px;
+	font-weight: bold;
+}
+
+.banner .boton {
+	background: #FFD600;
+	display: block;
+	width: 100%;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	padding: 10px;
+	border: none;
+	border-radius: 100px;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+}
+
+/*
+@media se utiliza para hacer diseños responsive, es decir, adaptar la página a diferentes tamaños de pantalla como computadoras, tablets y celulares.
+La palabra "screen" indica que se aplicará en pantallas, y la condición (max-width: Xpx) significa que los estilos dentro del bloque solo se aplicarán
+cuando el ancho de la pantalla sea igual o menor a ese valor. Por ejemplo, (max-width: 900px) aplica para tablets, mientras que (max-width: 600px) es más para celulares.
+Dentro de cada @media se pueden modificar estilos como el tamaño, la posición o la distribución de los elementos (por ejemplo, cambiar de horizontal a vertical con flex-direction o hacer que las cards ocupen el 100%). 
+Es importante entender que los estilos se aplican de arriba hacia abajo, y los media queries más pequeños sobrescriben a los más grandes. En resumen, 
+@media permite que tu diseño se vea bien en cualquier dispositivo, algo esencial en el desarrollo web moderno.
+
+
+*/
+
+@media screen and (max-width: 900px) { /* tablet */
+	.contenedor {
+		flex-direction: column; /* 🔥 se pone vertical */
+	}
+
+	.banner {
+		width: 100%;
+	}
+
+	.contenedor-conciertos {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 700px) { /* tablet peque;a */
+	
+}
+
+@media screen and (max-width: 600px) { /* celular */
+.card {
+		width: 100%; /* 🔥 una card por fila */
+	}
+}
