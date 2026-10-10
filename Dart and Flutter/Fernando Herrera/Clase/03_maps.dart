@@ -18,6 +18,10 @@ void main () {
   
   // Exercise 
   print('One Sprite Is: ${ pokemon["sprites"][1] }'); 
+
+  // Exercise solcionados era por no m=poner el map <string, dynamic>
+  print('Front: ${pokemon["sprites"][1]}');
+   print('Back: ${pokemon["sprites"][2]}');
     
   
 }
