@@ -1,0 +1,7 @@
+Hola, Que Hay!
+
+Aqui principalmente podemos crear un archivo Readme.md para tener el contenido mas ordenado y directo para ver este mismo mejor
+sin necesidad de tener miles de txt, e igual manera si lo prefieres hacer or medio de txt igual no imorta ya que estare dando
+mantenimiento ordenando y revisando cada coa que entre en el repositorio.
+
+Dicho esto me despido, Saludos !.
