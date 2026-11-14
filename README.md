@@ -8,7 +8,7 @@ Esta documentación no solamente me ayudará a mí, sino también a todas aquell
 
 Recuerda: todo es difícil, pero no imposible. ¡Échale ganas!
 
-# Participaciones
+## Participaciones
 Hola de nuevo !, Queria proponerte algo... , y eso es que:
 
  - Comparte tus conocimientos y recursos de programación.
@@ -17,10 +17,11 @@ Hola de nuevo !, Queria proponerte algo... , y eso es que:
 
 Esto lo puedes hacer con tu nombre de usuario o como gustes, en la carpeta que te corresponda e igual que por medio de pullRequest se iran revisando y anexando al repositorio
 
-# Organizacion del proyecto en Carpeta " Participantes "
+### Organizacion del proyecto en Carpeta " Participantes "
 
 / Ejemplo Carpeta:
 
+```
 Participantes/
 │
 ├── DJDA DEV/
@@ -37,8 +38,9 @@ Participantes/
 │   └── CSS/
 │   └── Java/
 └── README.md
+```
 
-# Pasos para lograrlo
+#### Pasos para lograrlo
 1- Clonar el repositorio
 
 git clone URL_DEL_REPOSITORIO
@@ -58,14 +60,14 @@ git push -u origin feature/<Nombre>File
 
 Todo se hace con el objetivo de que cada colaborador utilice su propio identificador para evitar confusiones.
 
-# Crea tu Pull Request
+### Crea tu Pull Request
 
-$ Ingresa al repositorio en GitHub.
-$ Selecciona la opción Compare & pull request.
-$ Verifica que la rama base sea main.
-$ Selecciona tu rama como rama de comparación.
-$ Describe brevemente las aportaciones realizadas.
-$ Envía tu Pull Request.
+* Ingresa al repositorio en GitHub.
+* Selecciona la opción Compare & pull request.
+* Verifica que la rama base sea main.
+* Selecciona tu rama como rama de comparación.
+* Describe brevemente las aportaciones realizadas.
+* Envía tu Pull Request.
 
 # ¡Gracias por participar!
 
