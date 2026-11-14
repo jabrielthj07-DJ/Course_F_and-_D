@@ -42,22 +42,24 @@ Participantes/
 
 #### Pasos para lograrlo
 1- Clonar el repositorio
-
+```
 git clone URL_DEL_REPOSITORIO
-
+```
 2- Crea tu propia Rama
-
+```
 git checkout -b feature/<Nombre>File
+```
 
 Ejemplos:
-- git checkout -b feature/DJFile
-- git checkout -b feature/<TuUsuario>File
-- git checkout -b feature/MariaFile
-
+```
+ git checkout -b feature/DJFile
+ git checkout -b feature/<TuUsuario>File
+ git checkout -b feature/MariaFile
+```
 3- Sube tu Rama
-
+```
 git push -u origin feature/<Nombre>File
-
+```
 Todo se hace con el objetivo de que cada colaborador utilice su propio identificador para evitar confusiones.
 
 ### Crea tu Pull Request
