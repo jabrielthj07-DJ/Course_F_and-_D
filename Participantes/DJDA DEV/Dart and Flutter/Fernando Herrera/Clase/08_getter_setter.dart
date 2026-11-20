@@ -3,7 +3,7 @@
 // _ = Privado
 
 void main() {
-  final mySquare = Square(side: 10);
+  final mySquare = Square(side: -10);
 
   //Con CalculateArea
   //print('Area: ${mySquare.calculateArea()}');
@@ -22,11 +22,22 @@ class Square {
 
   // 1er constructor
   //Square({required this.side});
+
   // 2do constructor
+
+  // Example Assertion - Son reglas de negocio, especialmente errores que son base aserciones
+  // flutter necesita que ciertos valores cumplan ciertas condiciones y si eso no se cumplen
+  // vienen errores provinientes de las asserciones. se agregan en el constructor, se recomienda llevar
+  // primero las aserciones y luego llas asigignaicones. si una asersion no se cumple no ejecuta las otras lineas
+
   Square({
     required double side,
   }) // le podemos poner double para ser bien, bien especificos
-  : _side = side;
+  : assert(
+         side >= 0,
+         'Debe desr mayor o igual a cero >=',
+       ), // podems agregar las que queramos o sea las que necesitemos
+       _side = side;
 
   //1er
   // double calculateArea() {
