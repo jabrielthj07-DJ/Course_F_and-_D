@@ -1,0 +1,207 @@
+::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+width: max-content;
+margin: 100px auto; 
+
+background-color: black;
+border-radius: 10px ;
+
+display: flex;
+flex-direction:column;
+justify-content: space-around;
+gap: 1rem;
+
+/* Function values (I)*/
+transform: scale(1.3);
+}
+
+.Link{
+    padding:1rem 1.5rem;
+    text-decoration: none;
+    color:white;
+}
+
+@media (width:600px){
+    .nav{
+    flex-direction: ROW;
+    }
+}
+
+/*Practice Responsive*/
+
+.nav{
+width: max-content;
+margin: 100px auto; 
+
+background-color: black;
+border-radius: 10px ;
+
+display: flex;
+flex-direction:column;
+justify-content: space-around;
+gap: 1rem;
+
+transform: scale(1.3);
+ /* Propiedad | Duración | Efecto de velocidad */
+    transition: background-color 0.5s ease-in-out;
+
+/*Tambien se puede usar dentro del nav, na mas que se le quita nav por lo mismo que ya esta dentro del nav (Se llama Nesting) usarlo siempre asi pamas orden y mas rapido*/
+
+@media (width >= 700px) {
+
+
+    flex-direction: ROW;
+    background-color: red;
+    
+}
+}
+
+.nav a:hover{
+background-color: rgb(45, 159, 225) ;
+}
+
+
+/*Especifidad: si un selector es mas especifico va a tener mayor importancia.*/
+
+/* Ejemplo: 
+
+.conteiner .box{ Qqui este esta especificado esta correcto
+
+} */
+
+/* .box{ aqui no esta especificado, por lo tanto no se va a aplicar el estilo, porque el otro selector es mas especifico
+
+} */
+
+.title{
+text-align: center;
+margin:80px auto;
+font-size: clamp(1rem, 6vw, 6rem);
+/* clamp (valor-minimo, valor-ideal, valor-maximo);  */
+
+}
+
+.box{
+display:block; /*sirve para que la imagen se comporte como un bloque, es decir, ocupe todo el ancho disponible y se coloque en una nueva línea. */
+margin: 50px auto;
+width: min(500px, 80%);
+/* lo que hace es que la imagen tenga un ancho máximo de 500px pero que también se ajuste al 80% del ancho de su contenedor si el contenedor es más pequeño
+ que 500px. Esto ayuda a que la imagen sea responsiva y se adapte a diferentes tamaños de pantalla. */
+
+}
+
+
+
+
+/* @Conteiner Video  */
+
+*,
+ ::after, /*el after sirve para agregar contenido despues del elemento, y el ::before sirve para agregar contenido antes del elemento. Ambos son pseudo-elementos que se utilizan para aplicar estilos adicionales sin necesidad de modificar el HTML directamente. */ */
+::before{ /*sirve para agregar contenido antes del elemento*/
+    margin: 0;
+    box-sizing: border-box; /*sirve para incluir el padding y el border en el ancho y alto del elemento*/
+}
+
+body{
+    background-color: #f0f0f0;
+padding: 80px;
+display: grid;
+/* grid-template-columns: 400px 600px; */
+gap: 2rem;
+}
+
+.card_conteiner{
+    overflow: hidden; /*sirve para ocultar cualquier contenido que se desborde del contenedor, lo que ayuda a mantener un diseño limpio y organizado. */
+    resize: horizontal; /*sirve para permitir que el usuario redimensione el contenedor horizontalmente, lo que puede ser útil para ajustar el diseño en diferentes tamaños de pantalla. */
+    width:100%;
+
+    container-type: inline-size; /*sirve para establecer el tipo de contenedor en "inline-size", lo que significa que el contenedor se ajustará al tamaño del contenido en línea, permitiendo que el diseño sea más flexible y adaptable a diferentes tamaños de pantalla. */
+    container-name: card-cambiante; /*sirve para asignar un nombre al contenedor, lo que permite referenciarlo posteriormente en las reglas de estilo utilizando la función "container()". Esto facilita la aplicación de estilos específicos a elementos dentro del contenedor, mejorando la organización y la mantenibilidad del código CSS. */
+}
+.card_item{
+    width: 300px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 6px -3px;
+}
+
+.card_img{
+    width: 100%;
+    height: 300px;
+     margin-bottom: 1rem; /*sirve para agregar un margen inferior de 1rem a la imagen, lo que crea un espacio entre la imagen y el contenido que sigue debajo de ella. Esto ayuda a mejorar la legibilidad y la apariencia visual de la tarjeta al separar claramente la imagen del texto u otros elementos que puedan estar presentes en la tarjeta. */
+    object-fit: cover; /*sirve para que la imagen se ajuste al contenedor sin distorsionarse, manteniendo su proporción original. */
+}
+
+@container  card-cambiante (min-width: 600px){
+.card_item{
+    width: auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr; /*sirve para crear una cuadrícula con 2 columnas de ancho proporcional y 3 columnas de ancho proporcional */
+    gap:2rem;
+}
+
+
+.card_img{
+    width: 100%;
+    height: 200px;
+     margin-bottom: 0; /*sirve para agregar un margen inferior de 1rem a la imagen, lo que crea un espacio entre la imagen y el contenido que sigue debajo de ella. Esto ayuda a mejorar la legibilidad y la apariencia visual de la tarjeta al separar claramente la imagen del texto u otros elementos que puedan estar presentes en la tarjeta. */
+}
+
+.card_texts{
+    display: grid;
+    align-content: center;
+    gap: 1rem;
+    
+
+}
+
+}
+
+@container  card-cambiante (min-width: 800px){
+.card_item{
+    max-width: 900px;
+    padding: 0;
+    grid-template-columns: unset; /*sirve para restablecer el valor de una propiedad a su valor inicial, en este caso se utiliza para restablecer el valor de grid-template-columns a su valor inicial, lo que significa que se eliminará la cuadrícula de columnas y se volverá a la disposición predeterminada del contenido. */
+    grid-template-rows: "img"; /*sirve para crear una cuadrícula con una sola fila llamada "img", lo que significa que el contenido se organizará en una sola fila y se le asignará el nombre "img" para referenciarlo posteriormente. */
+}
+
+.card__item::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    grid-area: img;
+    background-color: #0f0f0f84;
+    z-index: 20;
+    border-radius: inherit;
+}
+
+.card__img{
+    height: 400px;
+    grid-area: img;
+    z-index: 10;
+    border-radius: inherit;
+}
+
+.card__texts{
+    grid-area: img;
+    padding: 2rem;
+    color: white;
+    z-index: 30;
+}
+
+.card__name{
+    font-size: 3rem;
+}
+
+}
+
+/*Obedecen la casacada por eso hay que ponerlos hasta abajo*/
+/* @container  (min-width: 600px){
+    .card_item{
+        border-radius: 50%; /*el border radius sirve para redondear los bordes de un elemento, y al establecerlo en 50% se crea un círculo perfecto. Esto es útil para crear elementos circulares, como imágenes o botones, que pueden mejorar la apariencia visual de una página web.
+    }
+} */

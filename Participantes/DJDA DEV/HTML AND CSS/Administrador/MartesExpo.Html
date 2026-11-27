@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Administrador de tareas</title>
+
+    <link rel="stylesheet" href="MartesExpo.css">
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <h2>ADMINISTRADOR DE TAREA</h2>
+
+
+        <form onsubmit="handleFormSubmit(event)">
+
+
+            <input 
+                type="text"
+                placeholder="Nombre"
+                name="title"
+            >
+
+            <textarea
+                placeholder="Agrega descripcion"
+                name="description"
+                rows="5"
+            ></textarea>
+
+
+            <button type="submit">
+               Insertar
+            </button>
+
+        </form>
+
+
+
+
+        <ul class="task-list" id="task-list-container">
+
+
+        </ul>
+
+    </div>
+
+
+
+
+    <script src="MartesExpo.Js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
